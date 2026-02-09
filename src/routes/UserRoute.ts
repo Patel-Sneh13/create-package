@@ -85,10 +85,10 @@
 // export default router
 
 import { Router } from "express";
-import { getUsers } from "../controller/userController.ts";
+import { createUser } from "../controller/userController.ts";
 
 const router = Router();
 
-router.get("/", getUsers);
+router.post("/", createUser);
 
 export default router;

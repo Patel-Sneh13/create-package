@@ -1,8 +1,6 @@
 import 'reflect-metadata'
 import { DataSource } from 'typeorm';
 import { User } from '../entity/User.ts';
-import { Post } from '../entity/Post.ts';
-import { Profile } from '../entity/Profile.ts';
 
 export const AppDataSource = new DataSource({
     type: "mssql",
@@ -12,7 +10,7 @@ export const AppDataSource = new DataSource({
     password: "ghost",
     database: "Demo1",
     synchronize: true,
-    entities: [User,Profile,Post],
+    entities: [User],
     logging: true,
     options: {
         trustServerCertificate: true

@@ -20,6 +20,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@sneh_jarvis/email-validator": "github:Patel-Sneh13/package",
     "@sneh_jarvis/hellopackage": "github:Patel-Sneh13/hello-package",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",

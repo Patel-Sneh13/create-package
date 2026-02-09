@@ -6,8 +6,6 @@ import {
   OneToMany,
   CreateDateColumn
 } from "typeorm";
-import { Profile } from "./Profile.ts";
-import { Post } from "./Post.ts";
 
 @Entity()
 export class User {
@@ -22,13 +20,4 @@ export class User {
 
   @Column({ default: true })
   isActive!: boolean;
-
-  @CreateDateColumn()
-  createdAt!: Date;
-
-  @OneToOne(() => Profile, 'user')
-  profile!: Profile;
-
-  @OneToMany(() => Post, post => post.user)
-  posts!: Post[];
 }
